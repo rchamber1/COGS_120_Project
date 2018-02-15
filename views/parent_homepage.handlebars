@@ -1,0 +1,64 @@
+<html>
+<head>
+	<title>Parent Homepage</title>
+  <!--
+  <link href="/css/bootstrap.css" rel="stylesheet">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/bootstrap-theme.css" rel="stylesheet">
+  <link href="/css/bootstrap-theme.min.css" rel="stylesheet"> -->
+  <link href="/css/style.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab" rel="stylesheet">
+</head>
+
+<center>
+<body>
+
+
+  <div class="content">
+    <center>
+    <h1>Tasks</h1></center>
+
+<!-- Loop through the tasks: create row, create NAME/DESCRIPTION column,
+  create TIME column, then close COLUMN loop, close ROW loop, add <br>,
+  end #each loop -->
+    {{#each tasks}}
+    <div class="row">
+      <div id="tasks">
+      <!--
+        if (tasks.length == 0) {
+
+           Oops! It doesn't look like you have any tasks right now.
+        }
+        else {
+          <a href="#">{{name}}</a><br>
+        }
+      -->
+      <a href="#">{{name}}</a><br>
+      {{description}}<br>
+
+
+    </div>
+    <div id="tasktime">{{time}}</div>
+      <!-- end ROW -->
+  </div>
+  <br>
+      {{/each}}
+
+<center>
+  <a href="create_task.html"><img src="/images/general/add.png"><br>
+<a href="create_task.html">Add a Task</a></center>
+</div>
+
+
+<!--Navigation Starts Here-->
+<div id="navigation">
+  <div class="row">
+    <div class="column"><a href=""><img src="/images/general/home_ACTIVE.png"></a></div>
+    <div class="column"><a href=""><img src="/images/general/list-512.png"></a></div>
+    <div class="column"><a href="MyProfile.html"><img src="/images/general/view_profile.png"></a></div>
+  </div>
+</div>
+
+</body></center>
+</html>
