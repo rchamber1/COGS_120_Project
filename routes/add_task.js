@@ -3,12 +3,15 @@ var tasks = require("../tasks.json");
 exports.addTask = function(req, res){
   var name = req.query.name;
   var description = req.query.description;
-  var task = {
+  var time = req.query.time;
+
+  var newTask =
+  {
     "name": name,
     "description": description,
-    "image": ''
+    "time": time
   }
+  tasks.tasks.push(newTask);
 
-  tasks.tasks.push(task);
-  res.render('parent_homepage', 'tasks')
-};
+  res.render('parent_homepage', tasks)
+}

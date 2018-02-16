@@ -1,0 +1,19 @@
+{
+  "tasks": [
+    {
+        "name": "Brush teeth",
+        "description": "With your toothbrush",
+        "time": "10:00PM"
+    },
+    {
+        "name": "Drink water",
+        "description": "16 oz",
+        "time": "5:30PM"
+    },
+    {
+        "name": "Cook food",
+        "description": "Meal prep for the week",
+        "time": "8:00PM"
+    }
+  ]
+}

@@ -1,34 +1,4 @@
 {
   "tasks": [
-    {
-        "name": "Brush teeth",
-        "description": "With your toothbrush",
-        "time": "10:00PM",
-        "image": "public/images/users/brushteeth.gif"
-    },
-    {
-        "name": "Read two passages",
-        "description": "Read two paragraphs from your favorite book",
-        "time": "8:00AM",
-        "image": "public/images/users/brushteeth.gif"
-    },
-    {
-        "name": "Put together portfolio",
-        "description": "Add the pages to the website and link them",
-        "time": "1:00AM",
-        "image": "public/images/users/brushteeth.gif"
-    },
-    {
-        "name": "Drink water",
-        "description": "16 oz",
-        "time": "5:30PM",
-        "image": "public/images/users/brushteeth.gif"
-    },
-    {
-        "name": "Cook food",
-        "description": "Meal prep for the week",
-        "time": "8:00PM",
-        "image": "public/images/users/brushteeth.gif"
-    }
   ]
 }
