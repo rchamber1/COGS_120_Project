@@ -3,31 +3,39 @@
 <html>
 <head>
 	<title>Create Task</title>
-  <link href="/css/style.css" rel="stylesheet">
 
+	<link href="/css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab" rel="stylesheet">
 </head>
 
 <center>
 <body>
-
   <div class="content">
-    <center>
-    <h1>Create a Task</h1></center>
+
+		<center>
+    <h1>Create a Task</h1>
+		</center>
 
     <form id="CreateTaskForm" role="form" method="get" action="/add_task">
-    	    <div>
-    	      <label for="name">Name:</label><br>
-    	      <input type="text" placeholder="e.g. brush your teeth" name="name">
-    	    </div><br>
-    	    <div>
-    	      <label for="description">Description:</label><br>
-    	      <input type="text"  placeholder="e.g. with your OWN toothbrush" name="description">
-    	    </div><br>
-					<label for="time">Time:</label><br>
-					<input type="text"  placeholder="e.g. 10:00PM" name="time">
-				</div>
-    	</form>
+  		<div><label for="name">Name:</label>
+			<br>
+    	<input type="text" placeholder="e.g. brush your teeth" name="name">
+  		</div>
+			<br>
+  		<div><label for="description">Description:</label>
+			<br>
+    	<input type="text"  placeholder="e.g. with your OWN toothbrush" name="description">
+    	</div>
+			<br>
+			<div><label for="time">Time:</label>
+			<br>
+			<input type="text"  placeholder="e.g. 10:00PM" name="time">
+			</div>
+			<div><label for="picture">Upload a Picture:</label>
+			<br>
+			<input type="file" accept="image/*" id="capture" capture="camera"> 
+			</div>
+    </form>
 
 
 </div>
