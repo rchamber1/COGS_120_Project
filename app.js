@@ -11,8 +11,11 @@ var handlebars = require('express3-handlebars')
 var index = require('./routes/index');
 var parent_homepage = require('./routes/parent_homepage');
 var add_task = require('./routes/add_task');
+var task_list = require('./routes/task_list');
+var task = require('./routes/task');
+
 //var delete_task = require('.routes/delete_task');
-var task = require('./routes/viewTask');
+
 
 // Example route
 // var user = require('./routes/user');
@@ -42,8 +45,10 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get('/parent_homepage', parent_homepage.viewParentHomepage)
 app.get('/add_task', add_task.addTask);
+app.get('/task_list', task_list.view)
+app.get('/task', task.view);
 //app.get('/delete_task', delete_task.deleteTask);
-app.get('/viewTask', task.viewTask);
+
 // Example route
 // app.get('/users', user.list);
 
