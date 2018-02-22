@@ -3,17 +3,20 @@
     {
         "name": "Brush teeth",
         "description": "With your toothbrush",
-        "time": "10:00PM"
+        "time": "10:00PM",
+        "image": "images/users/brushteeth.gif"
     },
     {
         "name": "Drink water",
         "description": "16 oz",
-        "time": "5:30PM"
+        "time": "5:30PM",
+        "image": "http://moziru.com/images/water-clipart-child-6.jpg"
     },
     {
         "name": "Cook food",
         "description": "Meal prep for the week",
-        "time": "8:00PM"
+        "time": "8:00PM",
+        "image": "https://thumbs.dreamstime.com/b/asian-cook-chef-restaurant-cartoon-vector-illustration-chinese-japanese-cooking-food-making-sushi-vegetable-fish-35705064.jpg"
     }
   ]
 }

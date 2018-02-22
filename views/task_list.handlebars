@@ -23,17 +23,10 @@
   end #each loop -->
     {{#each tasks}}
     <div class="row">
-      <div id="tasks">
-      <!--
-        if (tasks.length == 0) {
+      <img src="{{image}}" id="taskimage">
+      <div id="task">
 
-           Oops! It doesn't look like you have any tasks right now.
-        }
-        else {
-          <a href="#">{{name}}</a><br>
-        }
-      -->
-      <a href="#">{{name}}</a><br>
+<a href="task/{{name}}/{{description}}/{{time}}">{{name}}</a><br>
       {{description}}<br>
 
     </div>
@@ -44,7 +37,7 @@
       {{/each}}
 
 <center>
-  <a href="create_task.html"><img src="/images/general/add.png"><br>
+  <a href="create_task.html"><img src="/images/general/add.png" id="icon"><br>
 <a href="create_task.html">Add a Task</a><br>
 
 </center>
@@ -55,7 +48,7 @@
 <div id="navigation">
   <div class="row">
     <div class="column"><a href="parent_homepage"><img src="/images/general/home.png"></a></div>
-    <div class="column"><a href=""><img src="/images/general/list-512_ACTIVE.png"></a></div>
+    <div class="column"><a href="task_list"><img src="/images/general/list-512_ACTIVE.png"></a></div>
     <div class="column"><a href="MyProfile.html"><img src="/images/general/view_profile.png"></a></div>
   </div>
 </div>

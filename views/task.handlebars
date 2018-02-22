@@ -7,7 +7,7 @@
   <link href="/css/bootstrap-theme.css" rel="stylesheet">
   <link href="/css/bootstrap-theme.min.css" rel="stylesheet"> -->
   <link href="/css/style.css" rel="stylesheet">
-
+<link href="../data.json">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab" rel="stylesheet">
 </head>
 
@@ -17,17 +17,14 @@
 
   <div class="content">
     <center>
-    <h1>Task</h1></center>
-
-<!-- Loop through the tasks: create row, create NAME/DESCRIPTION column,
-  create TIME column, then close COLUMN loop, close ROW loop, add <br>,
-  end #each loop -->
+    <h1>Task: {{name}}</h1></center>
 
 
       <div id="tasks">
 
-<b>Name of Task</b>: {{name}}
-
+<b>Name</b>: {{name}}<br>
+<b>Description</b>: {{description}}<br>
+<b>Time</b>: {{time}}<br>
 
 <br>
 
@@ -38,11 +35,12 @@
 <!--Navigation Starts Here-->
 <div id="navigation">
   <div class="row">
-    <div class="column"><a href="parent_homepage"><img src="/images/general/home_ACTIVE.png"></a></div>
-    <div class="column"><a href=""><img src="/images/general/list-512.png"></a></div>
+    <div class="column"><a href="../../../task_list"><img src="/images/general/back.png"></a></div>
+    <div class="column"><a href=""><img src="/images/general/nav-space.png"></a></div>
     <div class="column"><a href="MyProfile.html"><img src="/images/general/view_profile.png"></a></div>
   </div>
 </div>
+
 
 </body></center>
 </html>

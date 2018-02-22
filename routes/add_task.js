@@ -4,17 +4,17 @@ exports.addTask = function(req, res){
   var name = req.query.name;
   var description = req.query.description;
   var time = req.query.time;
-  //var task_number = 0;
+  var image = req.query.image;
 
   var newTask =
   {
     "name": name,
     "description": description,
     "time": time,
-    //"task_number": task_number++
+    "image": image
   }
   tasks.tasks.push(newTask);
 
-  res.render('parent_homepage', tasks);
+  res.render('task_list', tasks);
   //console.log(task_number);
 }

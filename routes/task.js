@@ -1,6 +1,16 @@
 var tasks = require('../tasks.json');
 
 exports.view = function(req, res){
-  console.log("You are at the TESTER page.");
-  res.render('task', tasks);
+  var name = req.params.name;
+  var description = req.params.description;
+  var time = req.params.time;
+  var image = req.params.image;
+
+  console.log("You are on the ''" + name + "'' page.");
+  res.render('task', {
+    "name": name,
+    "description": description,
+    "time": time,
+    "image": image
+  });
 };

@@ -3,39 +3,42 @@
 <html>
 <head>
 	<title>Create Task</title>
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/jquery-clockpicker.min.css" rel="stylesheet">
+  <link href="/css/jquery-clockpicker.css" rel="stylesheet">
 
-	<link href="/css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab" rel="stylesheet">
 </head>
 
 <center>
 <body>
-  <div class="content">
 
-		<center>
-    <h1>Create a Task</h1>
-		</center>
+  <div class="content">
+    <center>
+    <h1>Create a Task</h1></center>
 
     <form id="CreateTaskForm" role="form" method="get" action="/add_task">
-  		<div><label for="name">Name:</label>
-			<br>
-    	<input type="text" placeholder="e.g. brush your teeth" name="name">
-  		</div>
-			<br>
-  		<div><label for="description">Description:</label>
-			<br>
-    	<input type="text"  placeholder="e.g. with your OWN toothbrush" name="description">
-    	</div>
-			<br>
-			<div><label for="time">Time:</label>
-			<br>
-			<input type="text"  placeholder="e.g. 10:00PM" name="time">
+    	    <div>
+    	      <label for="name">Name:</label><br>
+    	      <input type="text" placeholder="task name" name="name">
+    	    </div><br>
+    	    <div>
+    	      <label for="description">Description:</label><br>
+    	      <input type="text"  placeholder="description" name="description">
+    	    </div><br>
+          <div>
+					<label for="time">Time:</label><br>
+					<input type="text"  placeholder="e.g. 10:00PM" name="time">
+				</div><br>
+				<div>
+					<label for="picture">Upload a Picture via URL </label><br>
+          <img id="uimgurl"><br>
+          <input type="text" id="txtimgurl" style="" name="image"/><br>
+          <!-- <input type="text" placeholder="imageURL" name="imageURL"><br> --> <br>
+			<!-- <input type="file" accept="image/*" id="capture" capture="camera" name="image"> --> <br>
+
 			</div>
-			<div><label for="picture">Upload a Picture:</label>
-			<br>
-			<input type="file" accept="image/*" id="capture" capture="camera">
-			</div>
-    </form>
+    	</form>
 
 
 </div>
@@ -43,12 +46,37 @@
 
 <div id="navigation">
   <div class="row">
-    <div class="column"><a href="parent_homepage"><img src="/images/general/cancel.png"></a></div>
+    <div class="column"><a href="task_list"><img src="/images/general/cancel.png"></a></div>
     <div class="column"><img src="/images/general/nav-space.png"></div>
     <div class="column"><input id="icon" type="image" form="CreateTaskForm" src="/images/general/accept.png" alt="Confirm"></input></a></div>
 
   </div>
 </div>
+
+
+<!-- SCRIPTS -->
+
+<script src="/js/jquery-clockpicker.min.js"></script>
+<script src="/js/jquery-clockpicker.js"></script>
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/task_list.js"></script>
+<script type="text/javascript">
+$('.clockpicker').clockpicker();
+</script>
+
+<!-- Image Preview Script -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+$(function(){
+$('#txtimgurl').change(function () {
+$('#imgurlhead').hide();
+$('#uimgurl').attr('src', $('#txtimgurl').val())
+})
+})
+</script>
+<!-- End Image Preview Script -->
+
+<!-- END SCRIPTS-->
 
 </body></center>
 </html>

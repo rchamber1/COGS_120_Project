@@ -1,6 +1,5 @@
 body {
   color:#3e3e3e;
-  margin:100px;
 }
 
 a {
@@ -28,9 +27,12 @@ h2 {
   font-weight:bold;
 }
 
+input {
+  font-family: 'Roboto Slab', serif;
+}
+
 .content img {
-  max-width:65px;
-  max-height:65px;
+
 }
 
 .content {
@@ -39,25 +41,37 @@ h2 {
   padding-left:15px;
   padding-right:15px;
   padding-bottom:10px;
-  height:475px;
-  width:296px;
   text-align:left;
   overflow:auto;
-  overflow-x:hidden;
+  height:90%;
   font-family: 'Open Sans Condensed', sans-serif;
 }
 
-#tasks {
+#task {
   float:left;
-  width:72%;
+  width:50%;
   line-height:1.15;
+  margin-left:10px;
 }
 
 #tasktime {
   text-align:right;
   float:right;
-  width:28%;
+  width:25%;
   font-family: 'Roboto Slab', serif;
+}
+
+#taskimage {
+  text-align:left;
+  float:left;
+  width:25%;
+  width:80px;
+  height:80px;
+}
+
+#uimgurl {
+  max-width:500px;
+  max-height:500px;
 }
 
 .row:after {
@@ -73,8 +87,9 @@ h2 {
   font-weight:bold;
   padding-top:10px;
   padding-bottom:10px;
-  width:326px;
-  height:30px;
+  padding-left:15px;
+  padding-right:15px;
+  height:4%;
 }
 
 #navigation img {

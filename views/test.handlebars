@@ -22,32 +22,24 @@
 <!-- Loop through the tasks: create row, create NAME/DESCRIPTION column,
   create TIME column, then close COLUMN loop, close ROW loop, add <br>,
   end #each loop -->
-    {{#each tasks}}
-    <div class="row">
-      <div id="tasks">
-      <!--
-        if (tasks.length == 0) {
+  {{#each tasks}}
+  <div class="row">
+    <img src="{{image}}" id="taskimage">
+    <div id="task">
 
-           Oops! It doesn't look like you have any tasks right now.
-        }
-        else {
-          <a href="#">{{name}}</a><br>
-        }
-      -->
-      <a href="#">{{name}}</a><br>
-      {{description}}<br>
+<a href="task/{{name}}/{{description}}/{{time}}">{{name}}</a><br>
 
-    </div>
-    <div id="tasktime">{{time}}</div>
-      <!-- end ROW -->
+    {{description}}<br>
+
   </div>
-  <br>
-      {{/each}}
+  <div id="tasktime">{{time}}</div>
+    <!-- end ROW -->
+</div>
+<br>
+    {{/each}}
 
 <center>
 TEST PAGE
-
-<a href="task">Task Page</a>
 
 </center>
 </div>
