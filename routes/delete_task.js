@@ -1,17 +1,12 @@
 var tasks = require("../tasks.json");
-var task_to_delete = tasks.task_number;
-
-/*
-function deleteTask(task_to_delete) {
-
-}
 
 exports.deleteTask = function(req, res){
-  var task_to_delete = tasks.task_number;
+  var name = reqs.param.name;
+  var description = reqs.param.description;
+  var time = reqs.param.time;
 
-  delete tasks.tasks.items.splice()
+//$('#delete').click(delete);
+  delete tasks[name,description,time];
 
-  res.render('parent_homepage', tasks);
-  console.log(task_number);
+  res.render('task_list', tasks);
 }
-*/
