@@ -21,7 +21,13 @@
       <input type="password" name="password"><br>
     	<input type="submit" value="Confirm">
     </form>
-    <br><br><br><br>
+    <br><br>
+    <p class="facebookLogin">
+      Please login through Facebook
+      <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+      </fb:login-button>
+    </p>
+    <br><br>
 
     Don't have an account?<br>
     <a href="create_account.html">Create one!</a>
@@ -38,6 +44,13 @@
       <div class="column"><img src="/images/general/nav-space.png"></div>
     </div>
 </div>
+
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/introHCI.js"></script>
+{{> facebook}}
+<script src="/js/facebook.js"></script>
 
 </body></center>
 </html>
