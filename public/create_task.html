@@ -8,6 +8,35 @@
   <link href="/css/jquery-clockpicker.css" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+
+      $('#formm').submit(function (e) {
+          e.preventDefault();
+          let searchForm = $('#search').val();
+
+          var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+          var animal = $(this).text();
+          var flickrOptions = {
+          tags: searchForm,
+          format: "json"
+        };
+        function displayPhotos(data) {
+          var photoHTML = '<ul>';
+          $.each(data.items,function(i,photo) {
+          photoHTML += '<li class="grid-25 tablet-grid-50">';
+          photoHTML += '<a href="' + photo.link + '" class="image">';
+          photoHTML += '<img src="' + photo.media.m + '"></a></li>';
+          }); // end each
+          photoHTML += '</ul>';
+          $('#photos').html(photoHTML);
+        }
+        $.getJSON(flickerAPI, flickrOptions, displayPhotos);
+        });
+    }); // end ready 
+   </script>
+
 </head>
 
 <center>
@@ -16,7 +45,7 @@
   <div class="content">
     <center>
     <h1>Create a Task</h1></center>
-
+   
     <form id="CreateTaskForm" role="form" method="get" action="/add_task">
     	    <div>
     	      <label for="name">Name:</label><br>
@@ -39,7 +68,16 @@
 
 			</div>
     	</form>
+    
+		<h1>Photo Search By Keyword</h1>
+        <form id="formm">
+          <label for="search">Type a search term</label>
+          <input type="search" name="search" id="search">
+          <input type="submit" value="Search" id="submit">
+        </form>
+        <ul id="photos">
 
+        </ul>
 
 </div>
 <!--Navigation Starts Here-->
@@ -65,7 +103,6 @@ $('.clockpicker').clockpicker();
 </script>
 
 <!-- Image Preview Script -->
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
 <script type="text/javascript">
 $(function(){
 $('#txtimgurl').change(function () {

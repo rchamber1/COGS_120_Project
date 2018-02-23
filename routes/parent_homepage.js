@@ -16,11 +16,10 @@ for (let i=0; i < tasksker.length; i++) {
 
 let choice = test.indexOf(Math.min.apply(null, test));
 
-let taskrh = {};
-taskrh.taskrh = JSON.stringify(tasksker[choice]);
+let taskrh = tasksker[choice];
 
 exports.viewParentHomepage = function(req, res){
   console.log("You are in the PARENT homepage");
   console.log(Object.keys(tasks)[1]);
-  res.render('parent_homepage', taskrh);
+  res.render('parent_homepage', { taskrh: taskrh});
 };

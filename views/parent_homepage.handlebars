@@ -22,7 +22,7 @@
 <!-- Loop through the tasks: create row, create NAME/DESCRIPTION column,
   create TIME column, then close COLUMN loop, close ROW loop, add <br>,
   end #each loop -->
-{{#each taskrh}}
+{{#with taskrh}}
     <div class="row">
       <img src="{{image}}" id="taskimage">
       <div id="task">
@@ -35,7 +35,7 @@
       <!-- end ROW -->
   </div>
   <br>
-      {{/each}}
+      {{/with}}
 <!--
     <div class="row">
       <div id="tasks">
