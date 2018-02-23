@@ -1,13 +1,7 @@
 <html>
 <head>
-	<title>Parent Homepage</title>
-  <!--
-  <link href="/css/bootstrap.css" rel="stylesheet">
-  <link href="/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/css/bootstrap-theme.css" rel="stylesheet">
-  <link href="/css/bootstrap-theme.min.css" rel="stylesheet"> -->
+  <title>Homepage</title>
   <link href="/css/style.css" rel="stylesheet">
-
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab" rel="stylesheet">
 </head>
 
@@ -17,11 +11,8 @@
 
   <div class="content">
     <center>
-    <h1>Tasks</h1></center>
+    <h1>Upcoming Task</h1></center>
 
-<!-- Loop through the tasks: create row, create NAME/DESCRIPTION column,
-  create TIME column, then close COLUMN loop, close ROW loop, add <br>,
-  end #each loop -->
 {{#with taskrh}}
     <div class="row">
       <img src="{{image}}" id="taskimage">
@@ -36,17 +27,7 @@
   </div>
   <br>
       {{/with}}
-<!--
-    <div class="row">
-      <div id="tasks">
-    SHOULD HAVE ONE TASK HERE ONLY
-
-    </div>
-	</div>
-  <br>
-
 </div>
--->
 
 <!--Navigation Starts Here-->
 <div id="navigation">

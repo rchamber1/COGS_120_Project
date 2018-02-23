@@ -34,7 +34,7 @@
         }
         $.getJSON(flickerAPI, flickrOptions, displayPhotos);
         });
-    }); // end ready 
+    }); // end ready
    </script>
 
 </head>
@@ -45,31 +45,28 @@
   <div class="content">
     <center>
     <h1>Create a Task</h1></center>
-   
+
     <form id="CreateTaskForm" role="form" method="get" action="/add_task">
     	    <div>
-    	      <label for="name">Name:</label><br>
+    	      <label for="name"><h3>Name</h3></label>
     	      <input type="text" placeholder="task name" name="name">
-    	    </div><br>
+    	    </div>
     	    <div>
-    	      <label for="description">Description:</label><br>
+    	      <label for="description"><h3>Description</h3></label>
     	      <input type="text"  placeholder="description" name="description">
-    	    </div><br>
+    	    </div>
           <div>
-					<label for="time">Time:</label><br>
+					<label for="time"><h3>Time</h3></label>
 					<input type="text"  placeholder="e.g. 10:00PM" name="time">
-				</div><br>
+				</div>
 				<div>
-					<label for="picture">Upload a Picture via URL </label><br>
+					<label for="picture"><h3>Upload a Picture via URL</h3></label>
           <img id="uimgurl"><br>
-          <input type="text" id="txtimgurl" style="" name="image"/><br>
-          <!-- <input type="text" placeholder="imageURL" name="imageURL"><br> --> <br>
-			<!-- <input type="file" accept="image/*" id="capture" capture="camera" name="image"> --> <br>
-
+          <input type="text" id="txtimgurl" style="" name="image"/>
 			</div>
     	</form>
-    
-		<h1>Photo Search By Keyword</h1>
+
+		<h3>Photo Search By Keyword</h3>
         <form id="formm">
           <label for="search">Type a search term</label>
           <input type="search" name="search" id="search">
