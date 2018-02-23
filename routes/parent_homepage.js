@@ -1,22 +1,22 @@
 var tasks = require('../tasks.json');
 
-let tasksker = tasks['tasks'];
+var tasksker = tasks['tasks'];
 
-let now = new Date();
+var now = new Date();
 
-let test = [];
+var test = [];
 
 
-for (let i=0; i < tasksker.length; i++) {
-	let timer = tasksker[i].time;
+for (var i=0; i < tasksker.length; i++) {
+	var timer = tasksker[i].time;
 	var timeSet = timer - now.getHours();
 	timeSet = Math.abs(timeSet);
 	test.push(timeSet);
 }
 
-let choice = test.indexOf(Math.min.apply(null, test));
+var choice = test.indexOf(Math.min.apply(null, test));
 
-let taskrh = tasksker[choice];
+var taskrh = tasksker[choice];
 
 exports.viewParentHomepage = function(req, res){
   console.log("You are in the PARENT homepage");
