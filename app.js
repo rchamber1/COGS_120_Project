@@ -15,6 +15,8 @@ var add_task = require('./routes/add_task');
 var delete_task = require('./routes/delete_task');
 var task_list = require('./routes/task_list');
 var task = require('./routes/task');
+var create_account = require('./routes/create_account');
+var profile = require('./routes/profile')
 
 //TEST variable created for testing concepts
 //var test= require('./routes/test');
@@ -50,7 +52,8 @@ app.get('/add_task', add_task.addTask);
 //app.get('/delete_task/:name/:description/:time', delete_task.deleteTask)
 app.get('/task_list', task_list.view);
 app.get('/task/:name/:description/:time', task.view);
-
+app.get('/create_account', create_account.createAccount);
+app.get('/profile', profile.view)
 //TEST route created for testing concepts
 //app.get('/test', test.view)
 

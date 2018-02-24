@@ -1,4 +1,4 @@
-var tasks = require("../tasks.json");
+var data = require("../data.json");
 
 exports.addTask = function(req, res){
   var name = req.query.name;
@@ -13,8 +13,8 @@ exports.addTask = function(req, res){
     "time": time,
     "image": image
   }
-  tasks.tasks.push(newTask);
+  data.tasks.push(newTask);
 
-  res.render('task_list', tasks);
+  res.render('task_list', data);
   //console.log(task_number);
 }

@@ -1,6 +1,6 @@
-var tasks = require('../tasks.json');
+var data = require('../data.json');
 
-var tasksker = tasks['tasks'];
+var tasksker = data['tasks'];
 
 var now = new Date();
 
@@ -20,6 +20,6 @@ var taskrh = tasksker[choice];
 
 exports.viewParentHomepage = function(req, res){
   console.log("You are in the PARENT homepage");
-  console.log(Object.keys(tasks)[1]);
+  console.log(Object.keys(data)[1]);
   res.render('parent_homepage', { taskrh: taskrh});
 };

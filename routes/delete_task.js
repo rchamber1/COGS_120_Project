@@ -1,4 +1,4 @@
-var tasks = require("../tasks.json");
+var data = require("../data.json");
 
 exports.deleteTask = function(req, res){
   var name = reqs.param.name;
@@ -6,7 +6,7 @@ exports.deleteTask = function(req, res){
   var time = reqs.param.time;
 
 //$('#delete').click(delete);
-  delete tasks[name,description,time];
+  delete data[name,description,time];
 
-  res.render('task_list', tasks);
+  res.render('task_list', data);
 }

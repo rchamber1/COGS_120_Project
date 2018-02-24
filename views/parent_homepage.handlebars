@@ -8,14 +8,16 @@
 <center>
 <body>
 
-
   <div class="content">
     <center>
     <h1>Upcoming Task</h1></center>
 
 {{#with taskrh}}
+    <div class="row"><center>
+      <img src="{{image}}" id="homepage_image">
+    </center>
+    </div>
     <div class="row">
-      <img src="{{image}}" id="taskimage">
       <div id="task">
 
 <a href="task/{{name}}/{{description}}/{{time}}">{{name}}</a><br>

@@ -64,9 +64,13 @@ input {
 #taskimage {
   text-align:left;
   float:left;
-  width:25%;
-  width:80px;
-  height:80px;
+  width:15%;
+  height:15%;
+}
+
+#homepage_image {
+  max-width:50%;
+  padding:5px;
 }
 
 #uimgurl {
