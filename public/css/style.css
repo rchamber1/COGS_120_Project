@@ -1,10 +1,13 @@
 body {
   color:#3e3e3e;
+  font-size:100%;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 a {
   color:#9b8acc;
   font-family: 'Roboto Slab', serif;
+  font-size:1.2em;
   text-decoration:none;
 }
 
@@ -13,7 +16,7 @@ a:hover{
 }
 
 h1 {
-  font-size:30px;
+  font-size:2.0em;
   margin:0px;
   font-family: 'Roboto Slab', serif;
   font-weight:bold;
@@ -31,10 +34,6 @@ input {
   font-family: 'Roboto Slab', serif;
 }
 
-.content img {
-
-}
-
 .content {
   background-color:#f0ede3;
   padding-top:10px;
@@ -43,8 +42,8 @@ input {
   padding-bottom:10px;
   text-align:left;
   overflow:auto;
-  height:90%;
-  font-family: 'Open Sans Condensed', sans-serif;
+  height:87.5%;
+  font-size:1.2em;
 }
 
 #task {
@@ -59,6 +58,7 @@ input {
   float:right;
   width:25%;
   font-family: 'Roboto Slab', serif;
+  font-size:1.5em;
 }
 
 #taskimage {
@@ -93,12 +93,12 @@ input {
   padding-bottom:10px;
   padding-left:15px;
   padding-right:15px;
-  height:4%;
+  height:7%;
 }
 
 #navigation img {
-  max-width:30px;
-  max-height:30px;
+  max-width:22%;
+  max-height:22%;
   content-align:center;
 }
 
@@ -108,6 +108,6 @@ input {
 }
 
 #icon {
-  max-width:30px;
-  max-height:30px;
+  width:10%;
+  height:10%;
 }

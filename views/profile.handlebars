@@ -1,7 +1,11 @@
-<!-- MyProfile.html -->
 <html>
 <head>
-	<title>My Profile</title>
+	<title>Task List</title>
+  <!--
+  <link href="/css/bootstrap.css" rel="stylesheet">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/bootstrap-theme.css" rel="stylesheet">
+  <link href="/css/bootstrap-theme.min.css" rel="stylesheet"> -->
   <link href="/css/style.css" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab" rel="stylesheet">
@@ -12,18 +16,39 @@
 
   <div class="content">
     <center>
-    <h1>My Profile</h1>
-<b>Username:</b> {{username}}<br>
-<b>E-mail:</b> {{email}}<br><br><br>
-<a href="/">Log Out</a>
+    <h1>My Profile</h1></center>
+
+<!-- Loop through the tasks: create row, create NAME/DESCRIPTION column,
+  create TIME column, then close COLUMN loop, close ROW loop, add <br>,
+  end #each loop -->
+    {{#each user}}
+    <div class="row">
+<center>
+  <h3>You are currently logged in as: </h3>
+  {{username}}<br><br>
+
+        <center><a href="/">Log Out</a></center><br><br><br>
+
+<u><b><h3>User Information</h3></b></u></center>
+<b>Username</b>: {{username}}<br>
+<b>Email</b>: {{email}}<br>
+<b>Password</b>: {{password}}<br>
+      <!-- end ROW -->
+  </div>
+  <br>
+      {{/each}}
+
+      <br><br>
+
 </div>
+
 
 <!--Navigation Starts Here-->
 <div id="navigation">
   <div class="row">
     <div class="column"><a href="parent_homepage"><img src="/images/general/home.png"></a></div>
     <div class="column"><a href="task_list"><img src="/images/general/list-512.png"></a></div>
-    <div class="column"><a href="MyProfile.html"><img src="/images/general/view_profile_ACTIVE.png"></a></div>
+    <div class="column"><a href="profile"><img src="/images/general/view_profile_ACTIVE.png"></a></div>
   </div>
 </div>
 
