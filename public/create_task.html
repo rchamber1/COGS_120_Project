@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<title>Create Task</title>
+  <title>Create Task</title>
   <link href="/css/style.css" rel="stylesheet">
   <link href="/css/jquery-clockpicker.min.css" rel="stylesheet">
   <link href="/css/jquery-clockpicker.css" rel="stylesheet">
@@ -26,11 +26,13 @@
           var photoHTML = '<ul>';
           $.each(data.items,function(i,photo) {
           photoHTML += '<li class="grid-25 tablet-grid-50">';
-          photoHTML += '<a href="' + photo.link + '" class="image">';
-          photoHTML += '<img src="' + photo.media.m + '"></a></li>';
+          photoHTML += '<img  id ="imageChoice" src="' + photo.media.m + '"></li>';
           }); // end each
           photoHTML += '</ul>';
           $('#photos').html(photoHTML);
+          $('#photos').on('click', 'img', function () {
+            console.log('test'); //add that to user info
+          });
         }
         $.getJSON(flickerAPI, flickrOptions, displayPhotos);
         });
@@ -47,26 +49,26 @@
     <h1>Create a Task</h1></center>
 
     <form id="CreateTaskForm" role="form" method="get" action="/add_task">
-    	    <div>
-    	      <label for="name"><h3>Name</h3></label>
-    	      <input type="text" placeholder="task name" name="name">
-    	    </div>
-    	    <div>
-    	      <label for="description"><h3>Description</h3></label>
-    	      <input type="text"  placeholder="description" name="description">
-    	    </div>
           <div>
-					<label for="time"><h3>Time</h3></label>
-					<input type="text"  placeholder="e.g. 10:00PM" name="time">
-				</div>
-				<div>
-					<label for="picture"><h3>Upload a Picture via URL</h3></label>
+            <label for="name"><h3>Name</h3></label>
+            <input type="text" placeholder="task name" name="name">
+          </div>
+          <div>
+            <label for="description"><h3>Description</h3></label>
+            <input type="text"  placeholder="description" name="description">
+          </div>
+          <div>
+          <label for="time"><h3>Time</h3></label>
+          <input type="text"  placeholder="e.g. 10:00PM" name="time">
+        </div>
+        <div>
+          <label for="picture"><h3>Upload a Picture via URL</h3></label>
           <img id="uimgurl"><br>
           <input type="text" id="txtimgurl" style="" name="image"/>
-			</div>
-    	</form>
+      </div>
+      </form>
 
-		<h3>Photo Search By Keyword</h3>
+    <h3>Photo Search By Keyword</h3>
         <form id="formm">
           <label for="search">Type a search term</label>
           <input type="search" name="search" id="search">
@@ -107,6 +109,7 @@ $('#imgurlhead').hide();
 $('#uimgurl').attr('src', $('#txtimgurl').val())
 })
 })
+
 </script>
 <!-- End Image Preview Script -->
 
