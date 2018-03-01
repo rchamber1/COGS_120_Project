@@ -4,19 +4,22 @@
         "name": "Brush teeth",
         "description": "With your toothbrush",
         "time": 10,
-        "image": "images/users/brushteeth.gif"
+        "image": "images/users/brushteeth.gif",
+        "index": 0
     },
     {
         "name": "Drink water",
         "description": "16 oz",
         "time": 5.5,
-        "image": "http://moziru.com/images/water-clipart-child-6.jpg"
+        "image": "http://moziru.com/images/water-clipart-child-6.jpg",
+        "index": 1
     },
     {
         "name": "Cook food",
         "description": "Meal prep for the week",
         "time": 8,
-        "image": "https://thumbs.dreamstime.com/b/asian-cook-chef-restaurant-cartoon-vector-illustration-chinese-japanese-cooking-food-making-sushi-vegetable-fish-35705064.jpg"
+        "image": "https://thumbs.dreamstime.com/b/asian-cook-chef-restaurant-cartoon-vector-illustration-chinese-japanese-cooking-food-making-sushi-vegetable-fish-35705064.jpg",
+        "index": 2
     }
   ]
 }
