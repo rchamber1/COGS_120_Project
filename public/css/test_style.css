@@ -1,0 +1,74 @@
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:3em;
+}
+
+h1 {
+  font-family: 'Roboto Slab', serif;
+  font-size:2em;
+  padding:2%;
+}
+
+a {
+  color:#9b8acc;
+  font-family: 'Roboto Slab', serif;
+  text-decoration:none;
+}
+
+a:hover{
+  color:#504179;
+  text-decoration:none;
+}
+
+.column {
+  float:left;
+  width:33.33%;
+}
+
+#task:hover{
+  background-color:#ededed;
+}
+
+#taskinfo {
+  float:left;
+  width:50%;
+  text-align:left;
+  margin-left:5%;
+}
+
+#tasktime {
+  float:left;
+  width:10%;
+  font-family: 'Roboto Slab', serif;
+  font-size:1.5em;
+}
+
+#taskimage {
+  float:left;s
+  margin-left:5%;
+  width:150px;
+}
+
+#navigation {
+  background-color:#4f4f4f;
+  overflow:hidden;
+  position:fixed;
+  bottom:0;
+  width:100%;
+  height:9%;
+}
+
+#navigation img {
+  width:35%;
+}
+
+#navigation a {
+    float: left;
+    display: block;
+    padding:10%;
+    margin:auto;
+}
+
+#navigation a:hover {
+    background-color:#afd1dd;
+}

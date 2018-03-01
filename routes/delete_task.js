@@ -1,12 +1,11 @@
 var data = require("../data.json");
 
 exports.deleteTask = function(req, res){
-  var name = reqs.param.name;
-  var description = reqs.param.description;
-  var time = reqs.param.time;
+  var index = req.params.index;
+  index = parseInt(index);
 
-//$('#delete').click(delete);
-  delete data[name,description,time];
+  data.tasks.splice(index,1);
 
   res.render('task_list', data);
+  console.log("deleting task");
 }

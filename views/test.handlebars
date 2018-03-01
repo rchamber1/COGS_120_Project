@@ -1,12 +1,13 @@
 <html>
 <head>
 	<title>Parent Homepage</title>
-  <!--
+
   <link href="/css/bootstrap.css" rel="stylesheet">
   <link href="/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/bootstrap-theme.css" rel="stylesheet">
-  <link href="/css/bootstrap-theme.min.css" rel="stylesheet"> -->
-  <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="/css/test_style.css" rel="stylesheet">
+  <!-- <link href="/css/style.css" rel="stylesheet"> -->
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab" rel="stylesheet">
 </head>
@@ -15,7 +16,7 @@
 <body>
 
 
-  <div class="content">
+  <div class="container">
     <center>
     <h1>TEST</h1></center>
 
@@ -23,25 +24,20 @@
   create TIME column, then close COLUMN loop, close ROW loop, add <br>,
   end #each loop -->
   {{#each tasks}}
-  <div class="row">
+  <div class="row" id="task">
     <img src="{{image}}" id="taskimage">
-    <div id="task">
-
+    <div id="taskinfo">
 <a href="task/{{name}}/{{description}}/{{time}}">{{name}}</a><br>
-
     {{description}}<br>
 
   </div>
   <div id="tasktime">{{time}}</div>
     <!-- end ROW -->
 </div>
+
 <br>
     {{/each}}
 
-<center>
-TEST PAGE
-
-</center>
 </div>
 
 

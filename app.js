@@ -19,7 +19,7 @@ var login = require('./routes/login');
 var profile = require('./routes/profile')
 
 //TEST variable created for testing concepts
-//var test= require('./routes/test');
+var test= require('./routes/test');
 
 // Example route
 // var user = require('./routes/user');
@@ -49,14 +49,14 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get('/parent_homepage', parent_homepage.viewParentHomepage)
 app.get('/add_task', add_task.addTask);
-//app.get('/delete_task/:name/:description/:time', delete_task.deleteTask)
+app.get('/delete_task', delete_task.deleteTask);
 app.get('/task_list', task_list.view);
 app.get('/task/:name/:description/:time/:index', task.view);
 app.get('/create_account', create_account.createAccount);
 app.get('/login', login.login);
 app.get('/profile', profile.view)
 //TEST route created for testing concepts
-//app.get('/test', test.view)
+app.get('/test', test.view)
 
 // Example route
 // app.get('/users', user.list);
