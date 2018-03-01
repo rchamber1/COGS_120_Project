@@ -1,0 +1,119 @@
+<!-- CreateTask.html -->
+
+<html>
+<head>
+  <title>Create Task</title>
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/jquery-clockpicker.min.css" rel="stylesheet">
+  <link href="/css/jquery-clockpicker.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+
+      $('#formm').submit(function (e) {
+          e.preventDefault();
+          var searchForm = $('#search').val();
+
+          var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+          var animal = $(this).text();
+          var flickrOptions = {
+          tags: searchForm,
+          format: "json"
+        };
+        function displayPhotos(data) {
+          var photoHTML = '<ul>';
+          $.each(data.items,function(i,photo) {
+          photoHTML += '<li class="grid-25 tablet-grid-50">';
+          photoHTML += '<img  id ="imageChoice" src="' + photo.media.m + '"></li>';
+          }); // end each
+          photoHTML += '</ul>';
+          $('#photos').html(photoHTML);
+          $('#photos').on('click', 'img', function () {
+            console.log('test'); //add that to user info
+          });
+        }
+        $.getJSON(flickerAPI, flickrOptions, displayPhotos);
+        });
+    }); // end ready
+   </script>
+
+</head>
+
+<center>
+<body>
+
+  <div class="content">
+    <center>
+    <h1>Create a Task</h1></center>
+
+    <form id="CreateTaskForm" role="form" method="get" action="/add_task">
+          <div>
+            <label for="name"><h3>Name</h3></label>
+            <input type="text" placeholder="task name" name="name">
+          </div>
+          <div>
+            <label for="description"><h3>Description</h3></label>
+            <input type="text"  placeholder="description" name="description">
+          </div>
+          <div>
+          <label for="time"><h3>Time</h3></label>
+          <input type="text"  placeholder="e.g. 10:00PM" name="time">
+        </div>
+        <div>
+          <label for="picture"><h3>Upload a Picture via URL</h3></label>
+          <img id="uimgurl"><br>
+          <input type="text" id="txtimgurl" style="" name="image"/>
+      </div>
+      </form>
+
+    <h3>Photo Search By Keyword</h3>
+        <form id="formm">
+          <label for="search">Type a search term</label>
+          <input type="search" name="search" id="search">
+          <input type="submit" value="Search" id="submit">
+        </form>
+        <ul id="photos">
+
+        </ul>
+
+</div>
+<!--Navigation Starts Here-->
+
+<div id="navigation">
+  <div class="row">
+    <div class="column"><a href="task_list"><img src="/images/general/cancel.png"></a></div>
+    <div class="column"><img src="/images/general/nav-space.png"></div>
+    <div class="column"><input id="icon" type="image" form="CreateTaskForm" src="/images/general/accept.png" alt="Confirm"></input></a></div>
+
+  </div>
+</div>
+
+
+<!-- SCRIPTS -->
+
+<script src="/js/jquery-clockpicker.min.js"></script>
+<script src="/js/jquery-clockpicker.js"></script>
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/task_list.js"></script>
+<script type="text/javascript">
+$('.clockpicker').clockpicker();
+</script>
+
+<!-- Image Preview Script -->
+<script type="text/javascript">
+$(function(){
+$('#txtimgurl').change(function () {
+$('#imgurlhead').hide();
+$('#uimgurl').attr('src', $('#txtimgurl').val())
+})
+})
+
+</script>
+<!-- End Image Preview Script -->
+
+<!-- END SCRIPTS-->
+
+</body></center>
+</html>
