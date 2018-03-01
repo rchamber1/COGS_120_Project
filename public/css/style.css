@@ -42,7 +42,7 @@ input {
   padding-bottom:10px;
   text-align:left;
   overflow:auto;
-  height:87.5%;
+  height:88%;
   font-size:1.2em;
 }
 
@@ -93,12 +93,11 @@ input {
   padding-bottom:10px;
   padding-left:15px;
   padding-right:15px;
-  height:7%;
+  height:8%;
 }
 
 #navigation img {
-  max-width:22%;
-  max-height:22%;
+  width:75px;
   content-align:center;
 }
 

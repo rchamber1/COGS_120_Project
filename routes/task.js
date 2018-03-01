@@ -5,12 +5,14 @@ exports.view = function(req, res){
   var description = req.params.description;
   var time = req.params.time;
   var image = req.params.image;
+  var index = req.params.index;
 
   console.log("You are on the ''" + name + "'' page.");
   res.render('task', {
     "name": name,
     "description": description,
     "time": time,
-    "image": image
+    "image": image,
+    "index": index
   });
 };
