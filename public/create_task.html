@@ -59,7 +59,15 @@
           </div>
           <div>
           <label for="time"><h3>Time</h3></label>
-          <input type="text"  placeholder="e.g. 10:00PM" name="time">
+
+          <div class="input-group clockpicker">
+    <input type="text" class="form-control" value="18:00" name="time">
+    <span class="input-group-addon">
+        <span class="glyphicon glyphicon-time"></span>
+    </span>
+</div>
+
+          <!-- <input type="text"  placeholder="e.g. 10:00PM" name="time"> -->
         </div>
         <div>
           <label for="picture"><h3>Upload a Picture via URL</h3></label>
@@ -92,14 +100,18 @@
 
 
 <!-- SCRIPTS -->
-
+<script src="/js/jquery-3.3.1.min.js"></script>
 <script src="/js/jquery-clockpicker.min.js"></script>
 <script src="/js/jquery-clockpicker.js"></script>
-<script src="/js/jquery-3.3.1.min.js"></script>
-<script src="/js/task_list.js"></script>
+<!-- clockpicker script -->
 <script type="text/javascript">
-$('.clockpicker').clockpicker();
+$('.clockpicker').clockpicker({
+    placement: 'bottom',
+    align: 'left',
+    donetext: 'Done'
+});
 </script>
+<!-- end clockpicker script -->
 
 <!-- Image Preview Script -->
 <script type="text/javascript">

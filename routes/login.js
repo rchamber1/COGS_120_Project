@@ -19,5 +19,9 @@ else if (data.user.length === 1) {
 }
 
   res.render('profile', data);
+  res.writeHead(302, {
+    'Location': '/homepage'
 
+  });
+  res.end();
 }

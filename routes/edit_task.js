@@ -1,6 +1,4 @@
-
-
-exports.addTask = function(req, res){
+exports.editTask = function(req, res){
   var data = require("../data.json");
   jsonstr = JSON.stringify(data);
 
@@ -8,8 +6,11 @@ exports.addTask = function(req, res){
   var description = req.query.description;
   var time = req.query.time;
   var image = req.query.image;
-  var index = data.tasks.length;
+  var index = req.query.index;
 
+//delete task in index first?
+
+//put in new task
   var newTask =
   {
     "name": name,

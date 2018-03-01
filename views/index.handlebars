@@ -1,26 +1,31 @@
 <html>
 <head>
   <title>Login Page</title>
+  <link href="/css/bootstrap.css" rel="stylesheet">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/bootstrap-theme.css" rel="stylesheet">
+  <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab" rel="stylesheet">
 </head>
 
-<center>
-<body>
 
-  <div class="content">
-    <center>
+<body><center>
+
+  <div class="container">
+
     <h1>Login</h1>
-
-    <br><br><br><br>
-
-    <form method="GET" action="/login">
-      Username:<br>
-      <input type="text" name="username"><br>
-      Password:<br>
-      <input type="password" name="password"><br>
-    	<input type="submit" value="Confirm">
+        <form method="GET" action="/login">
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" class="form-control" name="username" id="username">
+    </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password" name="password">
+    	<input type="submit" id="subtmitBtn" class="btn btn-default" value="Confirm">
     </form>
+
     <br><br>
 
 

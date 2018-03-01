@@ -21,23 +21,14 @@
 <!-- Loop through the tasks: create row, create NAME/DESCRIPTION column,
   create TIME column, then close COLUMN loop, close ROW loop, add <br>,
   end #each loop -->
+	  <center><h3>You are currently logged in as: </h3>
     {{#each user}}
     <div class="row">
-<center>
-  <h3>You are currently logged in as: </h3>
   {{username}}<br><br>
-
-        <center><a href="/">Log Out</a></center><br><br><br>
-<!--
-<u><b><h3>User Information</h3></b></u></center>
-<b>Username</b>: {{username}}<br>
-<b>Email</b>: {{email}}<br>
-<b>Password</b>: {{password}}<br> -->
-      <!-- end ROW -->
   </div>
-  <br>
       {{/each}}
 
+<a href="/">Log Out</a></center><br><br><br>
       <br><br>
 
 </div>
@@ -46,7 +37,7 @@
 <!--Navigation Starts Here-->
 <div id="navigation">
   <div class="row">
-    <div class="column"><a href="parent_homepage"><img src="/images/general/home.png"></a></div>
+    <div class="column"><a href="homepage"><img src="/images/general/home.png"></a></div>
     <div class="column"><a href="task_list"><img src="/images/general/list-512.png"></a></div>
     <div class="column"><a href="profile"><img src="/images/general/view_profile_ACTIVE.png"></a></div>
   </div>

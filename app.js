@@ -9,8 +9,9 @@ var path = require('path');
 var handlebars = require('express3-handlebars');
 
 var index = require('./routes/index');
-var parent_homepage = require('./routes/parent_homepage');
+var homepage = require('./routes/homepage');
 var add_task = require('./routes/add_task');
+var edit_task = require('./routes/edit_task');
 var delete_task = require('./routes/delete_task');
 var task_list = require('./routes/task_list');
 var task = require('./routes/task');
@@ -47,9 +48,10 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', index.view);
-app.get('/parent_homepage', parent_homepage.viewParentHomepage)
+app.get('/homepage', homepage.view)
 app.get('/add_task', add_task.addTask);
-app.get('/delete_task', delete_task.deleteTask);
+app.get('/edit_task/:index', edit_task.editTask);
+app.get('/delete_task/:index', delete_task.deleteTask);
 app.get('/task_list', task_list.view);
 app.get('/task/:name/:description/:time/:index', task.view);
 app.get('/create_account', create_account.createAccount);
