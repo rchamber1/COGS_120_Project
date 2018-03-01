@@ -1,6 +1,6 @@
 body {
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size:4em;
+    font-size:3em;
 }
 
 h1 {
@@ -49,6 +49,10 @@ a:hover{
 #taskimage {
   float:left;
   width:150px;
+}
+
+#task-homepage {
+  font-size:4em;
 }
 
 #navigation {
