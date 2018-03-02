@@ -49,7 +49,8 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', index.view);
-app.get('/homepage', homepage.view)
+app.get('/homepage', homepage.view);
+app.get('/homepage_alt', homepage.viewAlt);
 app.get('/add_task', add_task.addTask);
 app.get('/edit_task/:index', edit_task.editTask);
 app.get('/delete_task/:index', delete_task.deleteTask);
