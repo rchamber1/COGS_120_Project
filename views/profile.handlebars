@@ -1,40 +1,38 @@
 <html>
 <head>
-	<title>Task List</title>
-  <!--
+	<title>Viewing Profile</title>
   <link href="/css/bootstrap.css" rel="stylesheet">
   <link href="/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/bootstrap-theme.css" rel="stylesheet">
-  <link href="/css/bootstrap-theme.min.css" rel="stylesheet"> -->
+  <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab" rel="stylesheet">
 </head>
 
-<center>
 <body>
-
-  <div class="content">
-    <center>
-    <h1>My Profile</h1></center>
-
-<!-- Loop through the tasks: create row, create NAME/DESCRIPTION column,
-  create TIME column, then close COLUMN loop, close ROW loop, add <br>,
-  end #each loop -->
-	  <center><h3>You are currently logged in as: </h3>
+<div class="header">
+	<h1>My Profile</h1>
+</div>
+  <div class="container">
+<center>
+  <p>View your user profile, such as who you are currently logged in as and your user history.</p><br>
+  <hr><br>
+	  <p><h2>You are currently logged in as: </h2></p>
+    <br>
     {{#each user}}
     <div class="row">
-  {{username}}<br><br>
+<b>  {{username}}<br><br></b>
   </div>
       {{/each}}
 
-<a href="/">Log Out</a></center><br><br><br>
-      <br><br>
+<a href="/">Log Out</a></center>
 
 </div>
 
 
 <!--Navigation Starts Here-->
+<center>
 <div id="navigation">
   <div class="row">
     <div class="column"><a href="homepage"><img src="/images/general/home.png"></a></div>
@@ -42,6 +40,7 @@
     <div class="column"><a href="profile"><img src="/images/general/view_profile_ACTIVE.png"></a></div>
   </div>
 </div>
+</center>
 
-</body></center>
+</body>
 </html>

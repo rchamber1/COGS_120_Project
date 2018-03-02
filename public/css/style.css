@@ -1,12 +1,21 @@
 body {
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size:3em;
+    font-size:2.8em;
 }
 
 h1 {
   font-family: 'Roboto Slab', serif;
-  font-size:2em;
-  padding:2%;
+  font-size:2.8em;
+  padding-bottom:2%;
+}
+
+h2 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size:1.2em;
+}
+
+p {
+  text-align:justify;
 }
 
 a {
@@ -25,6 +34,37 @@ a:hover{
   width:33.33%;
 }
 
+.container {
+  font-size:1.5em;
+  height:82%;
+  width:90%;
+  overflow:auto;
+  overflow-x:hidden;
+}
+
+.header {
+  text-align:center;
+  margin-bottom:1%;
+}
+
+.input-group-addon {
+  font-size:1.5em;
+}
+
+.glyphicon glyphicon-time {
+  font-size:2em;
+}
+
+.form-group {
+  padding-top:2%;
+  padding-bottom:2%;
+}
+
+#task {
+  padding-bottom:5%;
+  padding-top:5%;
+}
+
 #task:hover{
   background-color:#ededed;
 }
@@ -33,10 +73,8 @@ a:hover{
   float:left;
   width:65%;
   text-align:left;
-  margin:auto;
   padding-left:3%;
   font-size:1.2em;
-
 }
 
 #tasktime {
@@ -77,4 +115,18 @@ a:hover{
 
 #navigation a:hover {
     background-color:#afd1dd;
+}
+
+#submitBtn {
+  font-size:1em;
+}
+
+#input-box, #txtimgurl, #search {
+  height:100px;
+  font-size:1em;
+}
+
+#submit {
+  font-size:1em;
+  margin:2%;
 }

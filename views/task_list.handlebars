@@ -11,11 +11,11 @@
 
 <center>
 <body>
-
+	<div class="header">
+    <h1>Tasks</h1>
+  </div>
   <div class="container">
-    <center>
-    <h1>Tasks</h1></center>
-
+<p>View all of your tasks here. To edit or remove a task, go to the task's individual page by clicking on its name.</p>
 <!-- Loop through the tasks: create row, create NAME/DESCRIPTION column,
   create TIME column, then close COLUMN loop, close ROW loop, add <br>,
   end #each loop -->
@@ -24,7 +24,7 @@
     <img src="{{image}}" id="taskimage">
     <div id="taskinfo">
 <a href="task/{{name}}/{{description}}/{{time}}/{{index}}">{{name}}</a><br>
-    {{description}}<br>
+    <br>
 
   </div>
   <div id="tasktime">{{time}}</div>

@@ -6,7 +6,7 @@
   <link href="/css/bootstrap-theme.css" rel="stylesheet">
   <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
-<link href="../data.json">
+
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab" rel="stylesheet">
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script>
@@ -42,21 +42,25 @@
 
 
 <body>
-
+<div class="header">
+  <h1>Task: {{name}}</h1>
+</div>
 
   <div class="container">
+All of your task information is saved here.
 
-    <center><h1>Task: {{name}}</h1></center>
-
+<hr>
       <b>Name</b>: {{name}}<br>
       <b>Description</b>: {{description}}<br>
       <b>Time</b>: {{time}}<br><br>
-
+<br><br>
 <center><button><a href="/delete_task/{{index}}">DELETE</a></button>
   <!-- <button><a href="/edit_task">EDIT</a></button></center> -->
 
 </form>
 <!-- end of container div -->
+<br><br><br>
+Coming soon: EDIT function.
 </div>
 
 <!--Navigation Starts Here-->
@@ -65,7 +69,7 @@
   <div class="row">
     <div class="column"><a href="../../../../task_list"><img src="/images/general/back.png"></a></div>
     <div class="column"><a href=""><img src="/images/general/nav-space.png"></a></div>
-    <div class="column"><a href="../../../profile"><img src="/images/general/view_profile.png"></a></div>
+    <div class="column"><a href="../../../../profile"><img src="/images/general/view_profile.png"></a></div>
   </div>
 </div>
 

@@ -8,40 +8,37 @@
   <link href="/css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab" rel="stylesheet">
 </head>
-
-
-<body><center>
-
+<body>
+<div class="header">
+  <h1>Day ToDay</h1>
+</div>
   <div class="container">
 
-    <h1>Login</h1>
+  <p>Welcome! Please log in to your Day ToDay account. </p><br>
         <form method="GET" action="/login">
     <div class="form-group">
       <label for="username">Username:</label>
-      <input type="text" class="form-control" name="username" id="username">
+      <input type="text" class="form-control" name="username" id="input-box">
     </div>
       <div class="form-group">
         <label for="password">Password:</label>
-      <input type="password" class="form-control" id="password" name="password">
-    	<input type="submit" id="subtmitBtn" class="btn btn-default" value="Confirm">
+      <input type="password" class="form-control" id="input-box" name="password">
+    </div>
+    <div class="form-group">
+    	<center><input type="submit" id="submitBtn" class="btn btn-default" value="Confirm"></center>
+    </div>
     </form>
 
-    <br><br>
-
-
-    Don't have an account?<br>
+  <center>Don't have an account?<br>
     <a href="create_account.html">Create one!</a>
 <br><br>
-
-
-    <p class="facebookLogin">
       Have a Facebook Account?<br>
       <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
       </fb:login-button>
-    </p>
-    <br>
-    <!---end div for content -->
     </center>
+
+    <!---end div for content -->
+
 </div>
 
 <!--Navigation Starts Here-->
