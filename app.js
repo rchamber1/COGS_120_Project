@@ -18,6 +18,7 @@ var task = require('./routes/task');
 var create_account = require('./routes/create_account');
 var login = require('./routes/login');
 var profile = require('./routes/profile')
+var create_task = require('./routes/create_task');
 
 //TEST variable created for testing concepts
 var test= require('./routes/test');
@@ -57,6 +58,7 @@ app.get('/task/:name/:description/:time/:index', task.view);
 app.get('/create_account', create_account.createAccount);
 app.get('/login', login.login);
 app.get('/profile', profile.view)
+app.get('/create_task', create_task.view);
 //TEST route created for testing concepts
 app.get('/test', test.view)
 
