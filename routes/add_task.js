@@ -1,5 +1,3 @@
-
-
 exports.addTask = function(req, res){
   var data = require("../data.json");
   jsonstr = JSON.stringify(data);
@@ -25,8 +23,7 @@ exports.addTask = function(req, res){
       if(err) {
           return console.log(err);
       }
-
-      console.log("The file was saved!");
+      console.log("The task was successfully added!");
   });
 
   res.render('task_list', data);

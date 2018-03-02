@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>Task History</title>
+  <link href="/css/bootstrap.css" rel="stylesheet">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/bootstrap-theme.css" rel="stylesheet">
+  <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab" rel="stylesheet">
+</head>
+
+<center>
+<body>
+	<div class="header">
+    <h1>Task History</h1>
+  </div>
+  <div class="container">
+<p>See how many tasks you've completed below.</p>
+<!-- Loop through the tasks: create row, create NAME/DESCRIPTION column,
+  create TIME column, then close COLUMN loop, close ROW loop, add <br>,
+  end #each loop -->
+  {{#each completed_tasks}}
+  <div class="row" id="task">
+    <img src="{{image}}" id="taskimage">
+    <div id="taskinfo">
+<a href="task/{{name}}/{{description}}/{{time}}/{{index}}">{{name}}</a><br>
+    <br>
+
+  </div>
+  <div id="tasktime">{{time}}</div>
+    <!-- end ROW -->
+</div>
+    {{/each}}
+
+</div>
+
+
+<!--Navigation Starts Here-->
+<div id="navigation">
+  <div class="row">
+    <div class="column"><a href="profile"><img src="/images/general/back.png"></a></div>
+    <div class="column"><img src="/images/general/nav-space.png"></div>
+    <div class="column"><img src="/images/general/nav-space.png"></div>
+  </div>
+</div>
+
+</body></center>
+</html>
