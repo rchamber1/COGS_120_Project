@@ -1,20 +1,19 @@
-<!-- CreateTask.html -->
-
 <html>
 <head>
-	<title>Create Task</title>
-	<link href="/css/bootstrap.css" rel="stylesheet">
+  <title>Homepage</title>
+  <link href="/css/bootstrap.css" rel="stylesheet">
   <link href="/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/bootstrap-theme.css" rel="stylesheet">
   <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
   <link href="/css/jquery-clockpicker.min.css" rel="stylesheet">
   <link href="/css/jquery-clockpicker.css" rel="stylesheet">
-
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script>
+
+<!-- form script -->
+  <script>
     $(document).ready(function() {
 
       $('#formm').submit(function (e) {
@@ -51,67 +50,74 @@
     <center><h1>Create a Task</h1></center>
   </div>
     <div class="container">
-      <p>Give your new task a name, description, time, and picture reminder. (*) are required fields.</p>
+      <p>Give your new task a name, description, time, and picture reminder. (<font color="red">*</font>) are required fields.</p>
 
       <form id="CreateTaskForm" role="form" method="get" action="/add_task">
+
             <div class="form-group">
-              <label for="name">*Name</label>
+              <label for="name"><font color="red">*</font>Name</label>
               <input type="text" class="form-control" id="input-box" placeholder="task name" name="name" required>
             </div>
+
             <div class="form-group">
-              <label for="description">*Description</label>
+              <label for="description"><font color="red">*</font>Description</label>
               <input type="text" class="form-control" id="input-box" placeholder="description" name="description" required>
             </div>
+
             <div class="form-group">
-            <label for="time">*Time</label>
+            <label for="time"><font color="red">*</font>Time</label>
             <div class="input-group clockpicker">
       <input type="text" class="form-control" id="input-box" value="18:00" name="time" required>
       <span class="input-group-addon">
           <span class="glyphicon glyphicon-time"></span>
       </span>
   </div>
-          </div>
-          <div class="form-group">
-            <label for="picture">*Upload a Photo via URL</label><br>
-            <div class="form-text">Paste your URL or pick an image using the search below. Image preview appears when URL is pasted.</div>
-            <input type="text" id="txtimgurl" class="form-control" name="image" placeholder="URL from keyword search appears here" required>
-            <img id="uimgurl">
-        </div>
-        </form>
-
-        <label>Photo Search By Keyword</label><br>
-        <div class="form-text">Search for a photo using a keyword (e.g. "dog") and click on the photo. The URL will automatically be loaded, but the preview will not.</div>
-            <form id="formm">
-              <div class="form-group">
-              <input type="search" class="form-control" name="search" id="search" placeholder="e.g. dog">
-              <center><input type="submit" value="Search" id="submit"></center>
-            </div>
-            </form>
-            <ul id="photos">
-            </ul>
-
 </div>
-<!--Navigation Starts Here-->
 
+<div class="form-group">
+  <label for="picture"><font color="red">*</font>Upload a Photo via URL</label><br>
+  <div class="form-text">Paste your URL or pick an image using the search below. Image preview appears when URL is pasted.</div>
+  <input type="text" id="txtimgurl" class="form-control" name="image" placeholder="URL from keyword search appears here" required>
+  <img id="uimgurl">
+</div>
+</form>
+
+<label>Photo Search By Keyword</label><br>
+<div class="form-text">Search for a photo using a keyword (e.g. "dog") and click on the photo. The URL will automatically be loaded, but the preview will not.</div>
+    <form id="formm">
+      <div class="form-group">
+      <input type="search" class="form-control" name="search" id="search" placeholder="e.g. dog">
+      <center><input type="submit" value="Search" id="submit"></center>
+    </div>
+    </form>
+    <ul id="photos">
+    </ul>
+<!-- end container -->
+</div>
+
+<!--Navigation Starts Here-->
+<center>
 <div id="navigation">
   <div class="row">
     <div class="column"><a href="task_list"><img src="/images/general/cancel.png"></a></div>
     <div class="column"><img src="/images/general/nav-space.png"></div>
-    <div class="column"><input id="icon" type="image" form="CreateTaskForm" src="/images/general/accept.png" alt="Confirm"></input></a></div>
-
+    <div class="column"><input type="image" id="accept" name="submit" form="CreateTaskForm" src="/images/general/accept.png" alt="Confirm"></input></div>
   </div>
-</div>
-
+</div></center>
 
 <!-- SCRIPTS -->
-
+<!-- clockpicker script -->
+<script src="/js/jquery-3.3.1.min.js"></script>
 <script src="/js/jquery-clockpicker.min.js"></script>
 <script src="/js/jquery-clockpicker.js"></script>
-<script src="/js/jquery-3.3.1.min.js"></script>
-<script src="/js/task_list.js"></script>
 <script type="text/javascript">
-$('.clockpicker').clockpicker();
+$('.clockpicker').clockpicker({
+    placement: 'bottom',
+    align: 'left',
+    donetext: 'Done'
+});
 </script>
+<!-- end clockpicker script -->
 
 <!-- Image Preview Script -->
 <script type="text/javascript">
@@ -127,5 +133,5 @@ $('#uimgurl').attr('src', $('#txtimgurl').val())
 
 <!-- END SCRIPTS-->
 
-</body></center>
+</body>
 </html>
