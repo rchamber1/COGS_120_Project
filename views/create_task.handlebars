@@ -3,13 +3,18 @@
 <html>
 <head>
 	<title>Create Task</title>
+	<link href="/css/bootstrap.css" rel="stylesheet">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/bootstrap-theme.css" rel="stylesheet">
+  <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
   <link href="/css/jquery-clockpicker.min.css" rel="stylesheet">
   <link href="/css/jquery-clockpicker.css" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script>
+	<script>
     $(document).ready(function() {
 
       $('#formm').submit(function (e) {
@@ -41,42 +46,49 @@
 
 </head>
 
-<center>
 <body>
+  <div class="header">
+    <center><h1>Create a Task</h1></center>
+  </div>
+    <div class="container">
+      <p>Give your new task a name, description, time, and picture reminder. (*) are required fields.</p>
 
-  <div class="content">
-    <center>
-    <h1>Create a Task</h1></center>
-
-    <form id="CreateTaskForm" role="form" method="get" action="/add_task">
-    	    <div>
-    	      <label for="name"><h3>Name</h3></label>
-    	      <input type="text" placeholder="task name" name="name">
-    	    </div>
-    	    <div>
-    	      <label for="description"><h3>Description</h3></label>
-    	      <input type="text"  placeholder="description" name="description">
-    	    </div>
-          <div>
-					<label for="time"><h3>Time</h3></label>
-					<input type="text"  placeholder="e.g. 10:00PM" name="time">
-				</div>
-				<div>
-					<label for="picture"><h3>Upload a Picture via URL</h3></label>
-          <img id="uimgurl"><br>
-          <input type="text" id="txtimgurl" style="" name="image"/>
-			</div>
-    	</form>
-
-		<h3>Photo Search By Keyword</h3>
-        <form id="formm">
-          <label for="search">Type a search term</label>
-          <input type="search" name="search" id="search">
-          <input type="submit" value="Search" id="submit">
+      <form id="CreateTaskForm" role="form" method="get" action="/add_task">
+            <div class="form-group">
+              <label for="name">*Name</label>
+              <input type="text" class="form-control" id="input-box" placeholder="task name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="description">*Description</label>
+              <input type="text" class="form-control" id="input-box" placeholder="description" name="description" required>
+            </div>
+            <div class="form-group">
+            <label for="time">*Time</label>
+            <div class="input-group clockpicker">
+      <input type="text" class="form-control" id="input-box" value="18:00" name="time" required>
+      <span class="input-group-addon">
+          <span class="glyphicon glyphicon-time"></span>
+      </span>
+  </div>
+          </div>
+          <div class="form-group">
+            <label for="picture">*Upload a Photo via URL</label><br>
+            <div class="form-text">Paste your URL or pick an image using the search below. Image preview appears when URL is pasted.</div>
+            <input type="text" id="txtimgurl" class="form-control" name="image" placeholder="URL from keyword search appears here" required>
+            <img id="uimgurl">
+        </div>
         </form>
-        <ul id="photos">
 
-        </ul>
+        <label>Photo Search By Keyword</label><br>
+        <div class="form-text">Search for a photo using a keyword (e.g. "dog") and click on the photo. The URL will automatically be loaded, but the preview will not.</div>
+            <form id="formm">
+              <div class="form-group">
+              <input type="search" class="form-control" name="search" id="search" placeholder="e.g. dog">
+              <center><input type="submit" value="Search" id="submit"></center>
+            </div>
+            </form>
+            <ul id="photos">
+            </ul>
 
 </div>
 <!--Navigation Starts Here-->
