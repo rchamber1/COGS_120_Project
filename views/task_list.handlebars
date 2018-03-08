@@ -1,3 +1,4 @@
+<!DOCTYPE HTML>
 <html>
 <head>
 	<title>Task List</title>
@@ -11,9 +12,12 @@
 
 <center>
 <body>
-	<div class="header">
-    <h1>Tasks</h1>
+  <div class="header">
+    <div class="column"><img src="/images/general/nav-space.png"></div>
+    <div class="column">Tasks</div>
+    <div class="column"><a href="./create_task"><img src="/images/general/add.png" id="icon"></a></div>
   </div>
+
   <div class="container">
 <p>View all of your tasks here. To edit or remove a task, go to the task's individual page by clicking on its name.</p>
 <!-- Loop through the tasks: create row, create NAME/DESCRIPTION column,
@@ -32,12 +36,9 @@
 </div>
     {{/each}}
 
-<center>
-  <a href="./create_task"><img src="/images/general/add.png" id="icon"><br>
-<a href="./create_task">Add a Task</a><br>
-
-</center>
+<br><br>
 </div>
+
 
 
 <!--Navigation Starts Here-->
@@ -51,3 +52,4 @@
 
 </body></center>
 </html>
+</doc>

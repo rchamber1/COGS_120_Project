@@ -1,3 +1,4 @@
+<!DOCTYPE HTML>
 <html>
 <head>
   <title>Homepage</title>
@@ -7,22 +8,22 @@
   <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <center>
 <body>
 <div class="header">
-<h1>Homepage</h1>
+Homepage
 </div>
-
   <div class="container">
 
 <!-- Version B is alternative: show all tasks, no "task list" icon -->
     {{#if viewAlt}}
     Welcome back! Here are your tasks for today.
     {{#each tasks}}
-      <div class="row box box{{index}}" id="task">
+      <div class="row box box{{index}}">
+        sfdsdjfksdjfl
         <img src="{{image}}" id="taskimage">
         <div id="taskinfo">
           <a href="task/{{name}}/{{description}}/{{time}}/{{index}}">{{name}}</a><br>
@@ -55,7 +56,6 @@
       {{/with}}
       {{/if}}
 </div>
-
 
 <!--Navigation Starts Here-->
 <div id="navigation">
@@ -101,3 +101,4 @@
 
 </body></center>
 </html>
+</doc>
