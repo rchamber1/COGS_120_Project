@@ -58,6 +58,7 @@ if ('development' == app.get('env')) {
 
 //homepage routes
 app.get('/', index.view);
+app.get('/viewAlt', index.viewAlt);
 app.get('/homepage', homepage.view);
 
 //account and profile routes
