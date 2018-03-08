@@ -79,13 +79,14 @@ a:hover{
     position: absolute;
     width: 50%;
     height: 300px;
-    line-height: 300px;
     font-size: 50px;
     text-align: center;
-    left: 150%;
-    top: 100px;
+    top: 20%;
     margin-left: -25%;
     display: none;
+}
+.box img {
+  width:100%;
 }
 
 .nonactive {
@@ -100,7 +101,7 @@ a:hover{
   position:fixed;
   top:0;
   width:100%;
-  height:11%;
+  height:10%;
   margin:auto;
   border-bottom-style:solid;
   border-bottom-width:thin;
@@ -216,8 +217,24 @@ color: white;
   width:150px;
 }
 
-#task-homepage {
-  font-size:4em;
+#homepage-task {
+    padding: 10px;
+  }
+
+#homepage-image {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+div.polaroid {
+  width: 75%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+div.homepage-task {
+  padding: 10px;
 }
 
 #navigation {
