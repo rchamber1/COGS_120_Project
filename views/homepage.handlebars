@@ -1,3 +1,4 @@
+<!DOCTYPE HTML>
 <html>
 <head>
   <title>Homepage</title>
@@ -7,55 +8,47 @@
   <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <center>
 <body>
 <div class="header">
-<h1>Homepage</h1>
+Homepage
 </div>
-
   <div class="container">
 
 <!-- Version B is alternative: show all tasks, no "task list" icon -->
     {{#if viewAlt}}
     Welcome back! Here are your tasks for today.
     {{#each tasks}}
-      <div class="row box box{{index}}" id="task">
-        <img src="{{image}}" id="taskimage">
-        <div id="taskinfo">
+      <div class="box box{{index}}">
+        <img src="{{image}}">
           <a href="task/{{name}}/{{description}}/{{time}}/{{index}}">{{name}}</a><br>
-          <br>
-        </div>
-        <div id="tasktime">{{time}}</div>
+          {{description}}<br>
+        {{time}}
         <!-- end ROW -->
       </div>
     {{/each}}
 
 <!-- Version A is original: show one task at a time, with "task list" icon -->
     {{else}}
-    Welcome back! Your upcoming task is below: <br><br>
+    Welcome back! Your upcoming task is below: <br>
 {{#with taskrh}}
-    <div class="row"><center>
-      <div id="task-homepage">
-      <img src="{{image}}" id="homepage_image">
-    </center>
-
-    <div class="row">
-      <div id="task">
-<a href="task/{{name}}/{{description}}/{{time}}/{{index}}">{{name}}</a><br>
-      {{description}}<br>
-<b>{{time}}</b>
+    <div class="polaroid">
+      <img src="{{image}}" alt="Norway" style="width:100%">
+      <div class="homepage-task">
+        <a href="task/{{name}}/{{description}}/{{time}}/{{index}}">{{name}}</a><br>
+              {{description}}
+              <br>
+        <b>{{time}}</b>
+      </div>
     </div>
-      <!-- end ROW -->
-  </div>
-  <br>
-</div>
       {{/with}}
       {{/if}}
-</div>
 
+      <!-- end container -->
+</div><br><br><br>
 
 <!--Navigation Starts Here-->
 <div id="navigation">
@@ -92,7 +85,7 @@
         $(select).show();
         $(select).animate({left: '50%'}, 500 );
         $(this).hide();
-        $(this).animate({left: '150%'}, 100 );
+        $(this).animate({left: '0%'}, 100 );
         });
 
   });
@@ -113,3 +106,4 @@
 
 </body></center>
 </html>
+</doc>

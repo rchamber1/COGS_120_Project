@@ -7,14 +7,14 @@
   <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 </head>
 <body>
-<div class="header">
-  <h1>Day ToDay</h1>
-</div>
-  <div class="container">
+  <div class="index">
+  <div class="container" id="container-index">
 
-  <p>Welcome! Please log in to your Day ToDay account. </p><br>
+      <center><h1>Day ToDay</h1></center><br>
+
         <form method="GET" action="/login">
     <div class="form-group">
       <label for="username">Username:</label>
@@ -25,7 +25,7 @@
       <input type="password" class="form-control" id="input-box" name="password">
     </div>
     <div class="form-group">
-    	<center><input type="submit" id="submitBtn" class="btn btn-default" value="Confirm"></center>
+    	<center><input type="submit" class="button" value="Log In"></center>
     </div>
     </form>
 
@@ -41,13 +41,7 @@
 
 </div>
 
-<!--Navigation Starts Here-->
-<div id="navigation">
-  <div class="row">
-    <div class="column"><img src="/images/general/nav-space.png"></div>
-    <div class="column"><img src="/images/general/nav-space.png"></div>
-      <div class="column"><img src="/images/general/nav-space.png"></div>
-    </div>
+<!-- no navigation for login -->
 </div>
 
 

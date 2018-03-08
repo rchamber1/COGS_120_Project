@@ -40,7 +40,7 @@
 
 <body>
 <div class="header">
-  <h1>Task: {{name}}</h1>
+  Task: {{name}}
 </div>
 
   <div class="container">
@@ -51,14 +51,13 @@ All of your task information is saved here.
       <b>Description</b>: {{description}}<br>
       <b>Time</b>: {{time}}<br><br>
 <br><br>
-<center><button><a href="/delete_task/{{index}}">DELETE</a></button>
-	<button><a href="/complete_task/{{index}}">COMPLETE</a></button></center>
+<center><button class="button-simple"><a href="/delete_task/{{index}}">delete</a></button>
+	<button class="button-simple"><a href="/complete_task/{{index}}">complete</a></button></center>
   <!-- <button><a href="/edit_task">EDIT</a></button></center> -->
 
 </form>
 <!-- end of container div -->
 <br><br><br>
-Coming soon: EDIT function.
 </div>
 
 <!--Navigation Starts Here-->
@@ -66,8 +65,7 @@ Coming soon: EDIT function.
 <div id="navigation">
   <div class="row">
     <div class="column"><a href="../../../../task_list"><img src="/images/general/back.png"></a></div>
-    <div class="column"><a href=""><img src="/images/general/nav-space.png"></a></div>
-    <div class="column"><a href="../../../../profile"><img src="/images/general/view_profile.png"></a></div>
+
   </div>
 </div>
 
