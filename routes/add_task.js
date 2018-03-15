@@ -29,8 +29,7 @@ exports.addTask = function(req, res){
   res.render('task_list', data);
 
   res.writeHead(302, {
-    'Location': '/task_list'
-    //add other headers here...
+    'Location': '/homepage' //routes to homepage now, not task list
   });
   res.end();
 }

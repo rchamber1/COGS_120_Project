@@ -58,11 +58,11 @@ if ('development' == app.get('env')) {
 
 //homepage routes
 app.get('/', index.view);
-app.get('/viewAlt', index.viewAlt);
+//app.get('/viewAlt', index.viewAlt);
 app.get('/homepage', homepage.view);
 
 //account and profile routes
-app.get('/homepage_alt', homepage.viewAlt);
+//app.get('/homepage_alt', homepage.viewAlt);
 app.get('/create_account', create_account.createAccount);
 app.get('/login', login.login);
 app.get('/profile', profile.view)

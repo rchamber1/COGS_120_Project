@@ -20,6 +20,7 @@ Homepage
   <div class="container">
 
 <!-- Version B is alternative: show all tasks, no "task list" icon -->
+    {{#if viewAlt}}
     Welcome back! Here are your tasks for today. Swipe to see another task.
     {{#each tasks}}
       <div class="box box{{index}}">
@@ -31,13 +32,35 @@ Homepage
       </div>
     {{/each}}
 
+<!-- Version A is original: show one task at a time, with "task list" icon -->
+    {{else}}
+    Welcome back! Your upcoming task is below: <br>
+{{#with taskrh}}
+    <div class="polaroid">
+      <img src="{{image}}" alt="Norway" style="width:100%">
+      <div class="homepage-task">
+        <a href="task/{{name}}/{{description}}/{{time}}/{{index}}">{{name}}</a><br>
+              {{description}}
+              <br>
+        <b>{{time}}</b>
+      </div>
+    </div>
+      {{/with}}
+      {{/if}}
+
+      <!-- end container -->
 </div><br><br><br>
 
 <!--Navigation Starts Here-->
 <div id="navigation">
   <div class="row">
     <div class="column"><a href="homepage"><img src="/images/general/home_ACTIVE.png"></a></div>
+    {{#if viewAlt}}
     <div class="column"><a href="create_task"><img src="/images/general/nav-add.png"></a></div>
+
+    {{else}}
+    <div class="column"><a href="task_list"><img src="/images/general/list-512.png"></a></div>
+    {{/if}}
     <div class="column"><a href="profile"><img src="/images/general/view_profile.png"></a></div>
   </div>
 </div>
