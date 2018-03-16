@@ -11,11 +11,11 @@
 
 <center>
 <body>
-	<div class="header" id="history_header">
-    <h1>Task History</h1>
+	<div class="header">
+    Task History
   </div>
   <div class="container">
-<p>See how many tasks you've completed below.</p>
+Below are all of your completed tasks.
 <!-- Loop through the tasks: create row, create NAME/DESCRIPTION column,
   create TIME column, then close COLUMN loop, close ROW loop, add <br>,
   end #each loop -->
@@ -23,7 +23,7 @@
   <div class="row" id="task">
     <img src="{{image}}" id="taskimage">
     <div id="taskinfo">
-<a href="task/{{name}}/{{description}}/{{time}}/{{index}}">{{name}}</a><br>
+<b>{{name}}</b><br>
     <br>
 
   </div>
