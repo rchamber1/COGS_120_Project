@@ -8,6 +8,7 @@
   <link href="/css/bootstrap-theme.css" rel="stylesheet">
   <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
@@ -34,6 +35,7 @@ Homepage
 </div><br><br><br>
 
 <!--Navigation Starts Here-->
+<div class="slider_right"><i class="right"></i></div>
 <div id="navigation">
   <div class="row">
     <div class="column"><a href="homepage"><img src="/images/general/home_ACTIVE.png"></a></div>
@@ -67,6 +69,16 @@ Homepage
         });
 
   });
+
+    $('.slider_right').on('click', function() {
+      $('div.box').each(function () {
+        if ($(this).css('display') === "block") {
+          $(this).trigger('click');
+          return false
+        }
+      });
+    });
+
 
 </script>
 
